@@ -1,0 +1,59 @@
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h3 class="mb-0">Train Reservation System</h3>
+        </div>
+        <div class="card-body">
+          <p>Select the number of seats you want to reserve:</p>
+          <div class="form-group row">
+            <label for="numSeats" class="col-sm-3 col-form-label"
+              >Number of seats:</label
+            >
+            <div class="col-sm-9 reservationInput">
+              <input
+                style="width:190px; height:25px; text-align:center;"
+                class="reservationInputBox"
+                type="number"
+                class="form-control"
+                id="numSeats"
+                name="numSeats"
+                placeholder="Enter Number Of Seats"
+                min="1"
+                max="7"
+                [(ngModel)]="numSeats"
+              />
+            </div>
+          </div>
+          <button
+            class="btn btn-primary reserveButton"
+            (click)="reserveSeats(numSeats)"
+          >
+            Reserve Seats
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-header bg-success text-white">
+          <h2 class="mb-0">Available Seats</h2>
+        </div>
+        <div class="card-body">
+          <ul class="list-group" style="margin-left:40px;">
+            <li
+              class="list-group-item"
+              *ngFor="let seat of seats; let i = index"
+              [class.bg-success]="!seat.isReserved"
+              [class.bg-danger]="seat.isReserved"
+            >
+              Seat {{ seat.id }} (Row {{ seat.row }}, Seat
+              {{ seat.seatNumber }})
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

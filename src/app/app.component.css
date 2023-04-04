@@ -1,0 +1,43 @@
+.card {
+  margin-bottom: 30px;
+}
+
+.list-group-item {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 5px;
+  width: 250px;
+  border-radius: 50px;
+}
+
+.list-group-item:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.bg-success {
+  height: 30px;
+  background-color: #28a745 !important;
+  color: #fff;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+  color: #fff;
+}
+.card {
+  text-align: center;
+}
+.reservationInput {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.reserveButton {
+  height: 30px;
+  width: 120px;
+  color: rgb(255, 255, 255);
+  background-color: #861212;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
